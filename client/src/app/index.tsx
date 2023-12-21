@@ -24,9 +24,6 @@ import routes from './routes';
 import Layout from '../components/Layout';
 
 // -------------
-import ReactGA from 'react-ga';
-const TRACKING_ID = "G-1NYVFPZ12E"; 
-ReactGA.initialize(TRACKING_ID);
 /**
  * Making base name for the website (needed in deployment)
  */
@@ -35,7 +32,6 @@ const router = createBrowserRouter(routes, {
 });
 
 function App() {
-  ReactGA.pageview(window.location.pathname + window.location.search);
   return (
     <div className="App">
       <Layout>
