@@ -50,7 +50,7 @@ connectMongoDB();
 const app = express();
 app.use(cors());
 app.use(express.json());
-app.use(express.static(path.join(__dirname, 'client/build')));
+app.use(express.static(path.join(__dirname, 'client/dist')));
 
 // API Endpoints
 app.post('/issue-wallet', async (req, res) => {
@@ -318,7 +318,7 @@ async function sendEventToGA(sessionId, category, action) {
 
 // Serve React App
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
+  res.sendFile(path.join(__dirname, 'client/dist', 'index.html'));
 });
 
 // Start the server
