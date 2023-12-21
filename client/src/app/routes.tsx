@@ -1,3 +1,4 @@
+import React from 'react';
 import Landing from '../pages/landing';
 import BlogSingle from '../pages/blog/single-blog';
 import Navbar from '../components/Navbar';
@@ -17,9 +18,9 @@ import UseCases from '../pages/landing/sections/usecases';
  * @returns the given component with the Navbar
  */
  const renderWithNav = (
-  component: JSX.Element,
+  component: React.JSX.Element,
   isLanding: boolean
-): JSX.Element => {
+): React.JSX.Element => {
   return (
     <>
       <Navbar isLanding={isLanding} />
@@ -30,8 +31,8 @@ import UseCases from '../pages/landing/sections/usecases';
 
 type RoutesType = {
   path: string;
-  element: JSX.Element;
-  errorElement?: JSX.Element;
+  element: React.JSX.Element;
+  errorElement?: React.JSX.Element;
 };
 
 const routes: RoutesType[] = [
