@@ -1,0 +1,41 @@
+.page-wrapper {
+  pointer-events: auto;
+  width: 100%;
+  background-color: white;
+  max-width: 800px;
+}
+.page-wrapper > section:first-of-type {
+  margin-top: 0;
+}
+.page-wrapper > section:last-of-type {
+  padding-bottom: 85px;
+}
+
+@media (max-width: 1199px) {
+  .page-wrapper {
+    margin: 0 auto;
+  }
+
+  .page-wrapper > section:last-of-type {
+    padding-bottom: 55px;
+  }
+}
+
+@media (max-width: 767px) {
+  .page-wrapper {
+    margin-top: 48px;
+  }
+}
+.spinner {
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top: 4px solid #000;
+  width: 24px;
+  height: 24px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

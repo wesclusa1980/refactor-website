@@ -1,0 +1,140 @@
+/* Modal Overlay */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1000; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  display: flex; /* To center the modal content */
+  align-items: flex-start; /* Align to the top */
+  padding-top: 10vh;
+  justify-content: center; /* Center horizontally */
+  background-color: rgba(0, 0, 0, 0.5); /* Black with opacity */
+}
+
+/* Modal Content Box */
+.modal-content {
+  background-color: #fff; /* White background */
+  padding: 40px; /* Padding for a larger form */
+  border-radius: 8px; /* Rounded corners for the modal */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  max-width: 600px; /* Maximum width */
+  width: 100%; /* Full width to enable responsiveness */
+  box-sizing: border-box; /* Box-sizing set to border-box */
+  position: relative; /* For absolute positioning of close button */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  position: absolute;
+  top: 15px;
+  right: 15px; /* Adjusted to align with the modal content padding */
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Modal Form Styles */
+.modal-content form {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-content form input[type='text'],
+.modal-content form input[type='email'],
+.modal-content form textarea {
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid #333; /* Dark underline */
+  margin-bottom: 30px; /* Space between inputs */
+  padding: 10px 5px; /* Padding for inputs */
+  font-size: 16px;
+}
+
+.modal-content form input::placeholder,
+.modal-content form textarea::placeholder {
+  color: #333;
+  opacity: 1; /* Full opacity for placeholders */
+}
+
+/* Buttons container */
+.modal-content .form-group {
+  display: flex;
+  justify-content: space-between; /* Space between buttons */
+  gap: 10px; /* Gap between buttons */
+}
+
+/* Common styles for both buttons */
+.modal-content .form-button {
+  padding: 10px 20px; /* Adjust padding to match the design */
+  font-size: 16px; /* Keep font size consistent */
+  border: 2px solid transparent; /* Initially transparent border */
+  cursor: pointer;
+  flex-grow: 1;
+  margin: 0 5px; /* Small margin between buttons */
+  transition: all 0.3s ease;
+}
+
+/* Style for the Submit button */
+.modal-content .form-submit {
+  background-color: #333; /* Dark background */
+  color: #fff; /* White text */
+  border-color: #333; /* Dark border to match the background */
+}
+
+.modal-content .form-submit:hover {
+  background-color: #555; /* Lighter background on hover */
+}
+
+/* Inverted style for the Back button */
+.modal-content .back-button {
+  background-color: #fff; /* White background */
+  color: #333; /* Dark text */
+  border-color: #333; /* Dark border */
+}
+
+.modal-content .back-button:hover {
+  background-color: #333; /* Dark background on hover */
+  color: #fff; /* White text on hover */
+  border-color: #333; /* Dark border to remain consistent */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .modal-content {
+    width: 90%; /* Smaller width on small screens */
+    padding: 20px; /* Less padding on small screens */
+  }
+}
+
+/* Responsive adjustments for larger screens */
+@media (min-width: 768px) {
+  .modal-content {
+    width: 50%; /* Wider form on larger screens */
+    padding: 40px; /* More padding on larger screens */
+  }
+}
+@media (min-width: 768px) {
+  .modal-content {
+    width: 50%; /* Wider form on larger screens */
+    padding: 40px; /* More padding on larger screens */
+    /* Center the modal content */
+    margin: auto;
+  }
+}
+.qr-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+

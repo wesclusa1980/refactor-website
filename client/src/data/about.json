@@ -1,0 +1,36 @@
+{
+  "title": "ABOUT",
+
+  "description": "Viverra tristique placerat massa est consectetur quisque nu fames lorem ipsum dolor sit amet consectetu.",
+
+  "paragraphe1": "Dolor sit amet, consectetur adipiscing elit. Viverra tristique placerat in massa consectetur quisque. Nunc ac fames lectus in libero aliquet lorem ipsum dolor sit amet enim est urus tincidunt magna ut turpis eu, eu enim. Nisl porttitor elit risus velit urna morbi mauris.",
+
+  "aboutInfo": [
+    {
+      "title": "EMAIL",
+      "link": {
+        "to": "mailto:jackob@yourwebsite.com",
+        "text": "jackob@yourwebsite.com"
+      }
+    },
+    {
+      "title": "ROLE",
+      "text": "Lead Designer"
+    },
+    {
+      "title": "PHONE",
+      "link": {
+        "to": "tel:+987987654321",
+        "text": "(+987) 987 654 321"
+      }
+    }
+  ],
+
+  "paragraphes": [
+    "Nam ultrices ultrices nec tortor pulvinar fermentum mi. Sociis sit tristique sagittis, mauris volutpat estera phasellus. Varius nec orci, quam augue lorem lines pellentesque non id. Tristique amet volutpat nunc euismod. Mauris [felis at quam](#) sollicitudin est sempe vulputate id in nullam. Purus tincidunt maga ut turpis eu, eu enim. Nisl porttitor elit risus velit urna morbit mauris at proin laoreet lobortis urna aliquam setera fermentum sit iaculis vitae hendrerit et. Arcu ac est dictum lorem ispum dolor sit amet nunc usrus seio.",
+
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra tristique placerat in sat massa consectetur quisque. Nunc aces fames lectus in libero aliquet ertare feraso est lorem nunc dolor sit amet settera aces volutpat in voltare lupar est phasellus.",
+
+    "Faucibus sed tristique fames sed aliquet ultricies eget viverra arcu. Vitae faucibus diam consequat aecenas. Turpis metus sit diam purus leo in varius ac quam. Nunc amet sei tristique set volutpat vulputate est phasellus. Volutpat faucibus per praesent aced no nuncare voltare per settera lorem ipsum dolor loboritas prion mauris varius est."
+  ]
+}

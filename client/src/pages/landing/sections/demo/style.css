@@ -1,0 +1,172 @@
+/*------------------------------------------------------------------
+
+version 1.1
+
+[Table of contents]
+1. Global CSS
+2. Header / Menu CSS
+3. Home Section CSS 
+4. Service Section CSS
+5. About Section CSS
+6. Portfolio Section CSS
+    6.1 Pretty Photo CSS
+7. Blog Section CSS
+8. Skills Section CSS
+9. Contact Section CSS
+10. Single Blog / Post Page CSS
+11. Responsive CSS
+
+-------------------------------------------------------------------*/
+
+/* ===================================
+    4. Service Section CSS
+====================================== */
+
+.section-des {
+  max-width: 440px;
+  font-size: 22px;
+  line-height: 1.65;
+}
+
+.serv-link-cover {
+  background-color: #f44647;
+  display: flex;
+  align-items: center;
+  padding: 50px 70px;
+  margin-top: 45px;
+}
+
+.serv-link-cover li + li {
+  margin-left: 100px;
+}
+
+.serv-link-cover a {
+  color: #fff;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 30px;
+  letter-spacing: 5px;
+  position: relative;
+  display: inline-block;
+}
+
+.serv-link-cover a:before {
+  content: '';
+  position: absolute;
+  bottom: 5px;
+  right: 0;
+  height: 2px;
+  width: 100%;
+  transition: 0.35s ease-out;
+  background-color: #fff;
+}
+
+.serv-link-cover a:hover:before {
+  width: 0;
+}
+
+.serv-block-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-top: 80px;
+}
+
+.serv-block-wrap > div:nth-last-of-type(-n + 2) {
+  margin-bottom: 0;
+}
+
+.serv-block-wrap .serv-block-item {
+  width: calc(50% - 65px);
+  margin-bottom: 80px;
+}
+
+.serv-block-wrap .serv-block-item:hover h4 {
+  transform: translateX(-10px);
+}
+
+.serv-block-wrap .serv-block-item h4 {
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 33px;
+  letter-spacing: 0.27em;
+  margin-top: 30px;
+  transition: 0.35s ease-out;
+}
+
+.serv-block-wrap .serv-block-item p {
+  margin-top: 23px;
+  max-width: 250px;
+  margin-bottom: 0;
+}
+
+/* ===================================
+    11. Responsive CSS
+====================================== */
+
+@media (max-width: 1199px) {
+  [data-jarallax-element] {
+    transform: none !important;
+  }
+}
+
+@media (max-width: 991px) {
+  .serv-block-wrap .serv-block-item {
+    margin-bottom: 65px;
+  }
+}
+
+@media (max-width: 767px) {
+  .serv-link-cover {
+    padding: 40px 50px;
+  }
+
+  .serv-block-wrap {
+    padding-top: 80px;
+  }
+
+  .serv-block-wrap .serv-block-item {
+    width: calc(50% - 15px);
+  }
+
+  .serv-block-wrap .serv-block-item img {
+    max-height: 60px;
+  }
+
+  .serv-block-wrap .serv-block-item p {
+    margin-top: 15px;
+  }
+
+  .serv-block-wrap .serv-block-item h4 {
+    font-size: 18px;
+    margin-top: 10px;
+    line-height: 22px;
+  }
+}
+
+@media (max-width: 575px) {
+  .serv-link-cover {
+    display: block;
+  }
+  .serv-link-cover li {
+    width: 100%;
+  }
+
+  .serv-link-cover li + li {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+
+  .serv-block-wrap .serv-block-item {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+
+  .serv-block-wrap > div:nth-last-of-type(2) {
+    margin-bottom: 40px;
+  }
+
+  .serv-block-wrap .serv-block-item p {
+    max-width: 100%;
+  }
+}

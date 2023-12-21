@@ -1,0 +1,60 @@
+{
+  "title": "SKILLS",
+
+  "description": "Lorem ipsum dolor sit amet consectetu adipiscing elit viverra tristique placerat",
+  "paragraphe": "Viverra tristique placerat in sat massa consectetur quisque. Nunc aces fames lectus in libero aliquet ertare feraso est lorem nunc dolor sit amet settera aces volutpat in voltare lupar est phasellus. Faucibus sed tristique fames sed aliquet ultricies eget viverra arcu.",
+
+  "skillsHistory": [
+    {
+      "title": "2016",
+      "description": "**2015 - 2016** placerat in massa consectetur quisque. Nunc ac fames lectus in libero aliquet est setera nunc."
+    },
+    {
+      "title": "2017",
+      "description": "**2016 - 2017** Turpis metus sit diam purus leo in variusquam. Nunc amet tristique volutpat adipiscing vulputate phasellus. Eget enim aliquam euismod mauris in vitae viverra blandit lectus diam feugiat."
+    },
+    {
+      "title": "2019",
+      "description": "**2020 - 2021** Nunc amet tristique volutpat adipiscing vulputate phasellus. Eget enim aliquam euismod."
+    },
+    {
+      "title": "2023",
+      "description": "**2022 - 2026** Eget enim aliquam euismod mauris in vitae viverra blandit lectus faucibus diam consequat maecenas turpis metus sit diam purus leo in varius."
+    }
+  ],
+
+  "skillsProgress": [
+    {
+      "name": "PHOTOSHOP",
+      "percentage": 55
+    },
+    {
+      "name": "ILLUSTRATOR",
+      "percentage": 68
+    },
+    {
+      "name": "MARKETING",
+      "percentage": 80
+    },
+    {
+      "name": "CREATIVITY",
+      "percentage": 43
+    },
+    {
+      "name": "AFFINITY",
+      "percentage": 55
+    },
+    {
+      "name": "LANGUAGES",
+      "percentage": 68
+    },
+    {
+      "name": "EDUCATION",
+      "percentage": 80
+    },
+    {
+      "name": "DEVELOPING",
+      "percentage": 43
+    }
+  ]
+}

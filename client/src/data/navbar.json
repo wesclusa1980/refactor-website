@@ -1,0 +1,41 @@
+{
+  "homeLink": {
+    "to": "/",
+    "text": "BambuMeta"
+  },
+
+  "navLinks": [
+    {
+      "to": "home",
+      "text": "Home"
+    },
+    {
+      "to": "services",
+      "text": "Industries"
+    },
+    
+    {
+      "to": "Use Cases",
+      "text": "Customers"
+    },
+    
+    {
+      "to": "contact",
+      "text": "Contact"
+    }
+  ],
+  "footLinks": [
+    {
+      "to": "#",
+      "text": "TW."
+    },
+    {
+      "to": "#",
+      "text": "IN."
+    },
+    {
+      "to": "#",
+      "text": "FB."
+    }
+  ]
+}

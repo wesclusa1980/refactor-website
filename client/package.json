@@ -1,0 +1,40 @@
+{
+  "homepage": "https://demo.cocobasic.com/ukko-react",
+  "name": "ukko-react",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "build:css": "tailwindcss -i ./src/assets/css/tailwinds.css -o ./dist/output.css --minify"
+  },
+  "dependencies": {
+    "@fontsource/poppins": "^4.5.10",
+    "axios": "^1.6.2",
+    "bootstrap": "^5.2.3",
+    "qrcode.react": "^3.1.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-ga": "^3.3.1",
+    "react-ga4": "^2.1.0",
+    "react-gtag": "^0.0.0",
+    "react-router-dom": "^6.8.2",
+    "react-scroll": "^1.9.0",
+    "reactjs-popup": "^2.0.5",
+    "swiper": "^9.0.5"
+  },
+  "devDependencies": {
+    "@types/node": "^18.14.4",
+    "@types/react": "^18.0.27",
+    "@types/react-dom": "^18.0.10",
+    "@types/react-scroll": "^1.8.6",
+    "@vitejs/plugin-react-swc": "^3.0.0",
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.32",
+    "tailwindcss": "^3.3.6",
+    "typescript": "^4.9.3",
+    "vite": "^4.1.0"
+  }
+}

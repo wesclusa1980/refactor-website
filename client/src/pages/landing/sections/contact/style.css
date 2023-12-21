@@ -1,0 +1,113 @@
+/* ===================================
+    9. Contact Section CSS
+====================================== */
+
+.contact-form {
+  margin-top: 40px;
+}
+
+.contact-form * {
+  overflow: hidden;
+}
+
+.contact-form p {
+  margin-bottom: 0;
+}
+
+.contact-form input[type='text'],
+.contact-form input[type='email'],
+.contact-form textarea {
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  line-height: 25px;
+  letter-spacing: 3px;
+  color: #000;
+  background-color: transparent;
+  border: 0;
+  border-bottom: 2px solid;
+  padding-top: 13px;
+  padding-bottom: 0px;
+  padding-left: 0;
+  margin: 10px 0;
+  height: 28px;
+  width: 100%;
+  box-sizing: initial;
+}
+
+.contact-form input[name='your-name'] {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.contact-form textarea {
+  height: 150px;
+}
+
+p.contact-submit-holder {
+  margin-top: 30px;
+  margin-bottom: 0 !important;
+}
+
+.contact-form input[type='submit'] {
+  display: inline-block;
+  border: 2px solid;
+  text-align: center;
+  padding: 20px 0px;
+  font-size: 14px;
+  cursor: pointer;
+  vertical-align: middle;
+  text-decoration: none;
+  background-color: transparent;
+  color: #000;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  width: 100%;
+  letter-spacing: 8px;
+  transition: opacity 0.3s ease;
+  cursor: pointer;
+}
+
+.contact-form input[type='submit']:hover {
+  opacity: 0.8;
+}
+
+.contact-form input[type='text']::-webkit-input-placeholder,
+.contact-form input[type='email']::-webkit-input-placeholder,
+.contact-form textarea::-webkit-input-placeholder {
+  font-family: 'Poppins', sans-serif;
+  color: #000;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 25px;
+  opacity: 1;
+}
+
+.contact-form input[type='text']:-ms-input-placeholder,
+.contact-form input[type='email']:-ms-input-placeholder,
+.contact-form textarea:-ms-input-placeholder {
+  font-family: 'Poppins', sans-serif;
+  color: #000;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 25px;
+  opacity: 1;
+}
+
+.contact-form input[type='text']::placeholder,
+.contact-form input[type='email']::placeholder,
+.contact-form textarea::placeholder {
+  font-family: 'Poppins', sans-serif;
+  color: #000;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 25px;
+  opacity: 1;
+}
+
+.respond-message {
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  text-align: center;
+  background-color: #ffffff;
+}

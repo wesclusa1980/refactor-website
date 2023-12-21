@@ -1,0 +1,38 @@
+{
+  "title": "BLOG",
+
+  "description": "Viverra tristique placerat massa est consectetur quisque nu fames lorem",
+
+  "posts": [
+    {
+      "to": "/single-blog",
+      "title": "The carbon in our apple pies vanquis",
+      "date": "MAR 25, 2021",
+      "category": "BRANDING"
+    },
+    {
+      "to": "/single-blog",
+      "title": "Perga white dwarf tesseract worldlets",
+      "date": "FEB 2, 2021",
+      "category": "ART"
+    },
+    {
+      "to": "/single-blog",
+      "title": "Network of wormholes astonishment",
+      "date": "NOV 13, 2020",
+      "category": "INTERIOR"
+    },
+    {
+      "to": "/single-blog",
+      "title": "Citizens of distant epochs van apollonius",
+      "date": "AUG 7, 2020",
+      "category": "BUSINESS"
+    },
+    {
+      "to": "/single-blog",
+      "title": "Encyclopaedia galactica shores of cosmic",
+      "date": "JUN 16, 2020",
+      "category": "DESIGN"
+    }
+  ]
+}
