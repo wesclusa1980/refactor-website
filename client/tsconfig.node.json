@@ -6,7 +6,7 @@
     "moduleResolution": "Node",
     "allowSyntheticDefaultImports": true,
     "resolveJsonModule": true,
-    "jsx": "react-jsx"
+    "jsx": "react"
   },
   "include": ["src/**/*", "vite.config.ts"],
   "types": ["node"],
