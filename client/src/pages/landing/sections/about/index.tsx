@@ -1,3 +1,4 @@
+import React from 'react';
 // Images
 import aboutImage from '../../../../assets/images/about/about-img.jpg';
 import signature from '../../../../assets/images/about/signature.svg';

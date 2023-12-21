@@ -1,3 +1,4 @@
+import React from 'react';
 // Images
 import previewImage from '../../../assets/images/blog/img-single-blog.jpg';
 import quoteImg from '../../../assets/images/blog/quote.svg';

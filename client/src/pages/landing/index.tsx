@@ -1,3 +1,4 @@
+import React from 'react';
 // Sections
 import Contact from './sections/contact';
 import HomeSection from './sections/home';
