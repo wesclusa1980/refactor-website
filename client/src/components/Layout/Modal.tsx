@@ -13,10 +13,10 @@ type IndustryData = {
   IndustryTitle: string;
   LinkDesc: string;
   ModalName: string;
-  brand: string;
-  programid: string;
-  templateId: string;
-  templateTierId?: string;
+  brand: number;
+  programid: number;
+  templateId: number;
+  templateTierId?: number;
 };
 
 type ModalProps = {

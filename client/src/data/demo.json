@@ -22,7 +22,7 @@
       "brand": 147,
       "programid": 683,
       "templateId": 499,
-      "templateTierId": "0"
+      "templateTierId": 0
     },
     {
       "imageAltText": "serv icon",
@@ -33,21 +33,29 @@
       "brand": 148,
       "programid": 684,
       "templateId": 500,
-      "templateTierId": "0"
+      "templateTierId": 0
     },
     {
       "imageAltText": "serv icon",
       "IndustryTitle": "INSURANCE",
       "IndustryDesc": "A full stack allaround designer that may or may not include a guide for specific createive",
       "LinkDesc": "Get your insurance card",
-      "ModalName": "insuranceModal"
+      "ModalName": "insuranceModal",
+      "brand": 148,
+      "programid": 684,
+      "templateId": 500,
+      "templateTierId": 0
     },
     {
       "imageAltText": "serv icon",
       "IndustryTitle": "CPG",
       "IndustryDesc": "Tellus pharetra erat tristique erat donec dignissim etiam sed malesuada enim sodales",
       "LinkDesc": "Get your cpg card",
-      "ModalName": "cpgModal"
+      "ModalName": "cpgModal",
+      "brand": 148,
+      "programid": 684,
+      "templateId": 500,
+      "templateTierId": 0
     }
   ]
 }

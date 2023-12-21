@@ -18,6 +18,10 @@ type ServiceBox = {
   IndustryDesc: string;
   LinkDesc: string;
   ModalName: string;
+  brand: number;
+  programid: number;
+  templateId: number;
+  templateTierId: number;
 };
 
 const Industries: FC = () => {
