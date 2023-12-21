@@ -1,4 +1,3 @@
-// Pages and Components
 import React from 'react';
 import Landing from '../pages/landing';
 import BlogSingle from '../pages/blog/single-blog';
