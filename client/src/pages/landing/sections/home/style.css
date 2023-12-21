@@ -3,13 +3,13 @@
 ====================================== */
 
 #home {
-  height: 100vh;
-  padding: 85px 0;
-  margin: 0;
-  transform: translateX(-50px);
-  background-color: white;
-  
-  
+  height: 100vh; /* Adjusted to use viewport height */
+  display: flex; /* Using flexbox for centering */
+  align-items: center; /* Center content vertically */
+  justify-content: center; /* Center content horizontally */
+  margin: 0; /* Remove any margins that might affect the layout */
+  padding: 0; /* Adjust padding as needed */
+  background-color: white; /* Your choice of background color */
 }
 
 #home .container-wrap {
