@@ -89,7 +89,7 @@ const Modal: FC<ModalProps> = ({ showModal, industryData, closeModal }) => {
       }
     };
     
-    const baseURL = import.meta.env.REACT_APP_API_URL || 'http://localhost:3001';
+    const baseURL = import.meta.env.REACT_APP_API_URL;
     try {
       const walletResponse = await axios.post(`${baseURL}/issue-wallet`, issueWalletData);
       if (walletResponse.data && walletResponse.data.downloadUrl) {
