@@ -1,11 +1,14 @@
 {
   "compilerOptions": {
+    "esModuleInterop": true,
     "composite": true,
     "module": "ESNext",
     "moduleResolution": "Node",
-    "allowSyntheticDefaultImports": true
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true,
+    "jsx": "react-jsx"
   },
-  "include": ["vite.config.ts"],
+  "include": ["src/**/*", "vite.config.ts"],
   "types": ["node"],
   "typeRoots": ["./node_modules/@types"]
 }
