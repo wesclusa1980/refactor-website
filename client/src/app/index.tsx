@@ -1,4 +1,5 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import React from 'react';
 
 // fonts
 import '@fontsource/poppins/100.css';
