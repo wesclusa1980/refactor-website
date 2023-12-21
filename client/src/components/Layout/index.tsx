@@ -3,11 +3,12 @@ import { ReactNode } from 'react';
 // Styles
 import './style.css';
 
-// ----------------
+// ---------------
 
 type LayoutProps = {
-  children: ReactNode;
+  children?: ReactNode;
 };
+
 
 function Layout({ children }: LayoutProps) {
   return (
