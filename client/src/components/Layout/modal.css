@@ -12,6 +12,7 @@
   padding-top: 10vh;
   justify-content: center; /* Center horizontally */
   background-color: rgba(0, 0, 0, 0.5); /* Black with opacity */
+  overflow-y: auto;
 }
 
 /* Modal Content Box */
@@ -24,8 +25,23 @@
   width: 100%; /* Full width to enable responsiveness */
   box-sizing: border-box; /* Box-sizing set to border-box */
   position: relative; /* For absolute positioning of close button */
+  overflow-y: auto;
+  overflow-x: auto;
+  max-height: 80vh;
 }
-
+.buttons-container {
+  display: flex;
+  flex-wrap: wrap; /* Wrap buttons if not enough space */
+  gap: 10px; /* Spacing between buttons */
+  justify-content: center; /* Center buttons horizontally */
+  margin-bottom: 20px; /* Space between buttons and form */
+}
+.modal-content > .google-btn,
+.modal-content > .linkedin-btn {
+  display: inline-block; /* Allows buttons to be side by side */
+  width: calc(50% - 10px); /* Subtract the gap from the 50% width */
+  margin: 0 5px; /* Adds margin to each side of the button */
+}
 /* The Close Button */
 .close {
   color: #aaa;
@@ -107,7 +123,43 @@
   color: #fff; /* White text on hover */
   border-color: #333; /* Dark border to remain consistent */
 }
+.modal-content form {
+  padding-bottom: 20px; /* Add padding to the bottom of the form */
+}
 
+/* Additional styles for the buttons to match the design in the provided image */
+.google-btn,
+.linkedin-btn {
+  text-align: center; /* Center the text inside buttons */
+  padding: 10px; /* Add some padding inside buttons */
+  border-radius: 4px; /* Slightly rounded corners for the buttons */
+}
+
+/* You can add these classes to your buttons or adjust the selectors to match your existing classes */
+.google-btn {
+  background-color: #db4437; /* Google Red */
+  color: white; /* Text color */
+}
+
+.linkedin-btn {
+  background-color: #0073b1; /* LinkedIn Blue */
+  color: white; /* Text color */
+}
+
+/* Make sure to handle the hover state for buttons */
+.google-btn:hover,
+.linkedin-btn:hover {
+  opacity: 0.9; /* Slightly reduce opacity on hover for interaction feedback */
+}
+
+/* Since you have media queries, ensure your buttons still look good on different screen sizes */
+@media (max-width: 768px) {
+  .modal-content > .google-btn,
+  .modal-content > .linkedin-btn {
+    width: 100%; /* Full width buttons on smaller screens */
+    margin: 5px 0; /* Adjust margin for vertical stacking */
+  }
+}
 /* Responsive adjustments for smaller screens */
 @media (max-width: 768px) {
   .modal-content {
@@ -137,4 +189,16 @@
   align-items: center;
   justify-content: center;
 }
+/* Ensure buttons are next to each other */
+.buttons-container {
+  display: flex;
+  justify-content: center; /* Center buttons horizontally */
+  gap: 10px; /* Space between buttons */
+}
 
+/* Adjust for smaller screens */
+@media (max-width: 768px) {
+  .buttons-container {
+    flex-direction: column; /* Stack buttons vertically */
+  }
+}
