@@ -16,18 +16,45 @@
     {
       "imageAltText": "serv icon",
       "IndustryTitle": "RETAIL",
-      "IndustryDesc": "A full stack allaround designer that may or may not include aguide for specific createive",
+      "IndustryDesc": "Boost retail engagement with digital wallet cards, your ticket to on-the-go deals, loyalty rewards, and a smoother, personalized shopping journey.",
       "LinkDesc": "Get your retail card",
       "ModalName": "retailModal",
       "brand": 147,
       "programid": 683,
       "templateId": 499,
-      "templateTierId": 0
+      "templateTierId": 0,
+      "useCases": [
+        {
+          "id": "loyalty",
+          "name": "Loyalty",
+          "explanation": "Create dynamic loyalty programs...",
+          "simulationApiEndpoint": "https://api.example.com/simulate/loyalty",
+          "points": 1000
+        },
+        {
+          "id": "promotions",
+          "name": "Promotions",
+          "explanation": "Create dynamic loyalty programs...",
+          "simulationApiEndpoint": "https://api.example.com/simulate/loyalty"
+        },
+        {
+          "id": "messaging",
+          "name": "Messaging",
+          "explanation": "Create dynamic loyalty programs...",
+          "simulationApiEndpoint": "https://api.example.com/simulate/loyalty"
+        },
+        {
+          "id": "orderStatus",
+          "name": "Order Status",
+          "explanation": "Create dynamic loyalty programs...",
+          "simulationApiEndpoint": "https://api.example.com/simulate/loyalty"
+        }
+      ]
     },
     {
       "imageAltText": "serv icon",
       "IndustryTitle": "HOSPITALITY",
-      "IndustryDesc": "Tellus pharetra erat tristique erat donec dignissim etiam sed malesuada enim sodales",
+      "IndustryDesc": "Elevate hospitality with digital wallet cards: instant perks and seamless payments for hotels and restaurants.",
       "LinkDesc": "Get your hospitality card",
       "ModalName": "hospitalityModal",
       "brand": 148,
@@ -38,18 +65,36 @@
     {
       "imageAltText": "serv icon",
       "IndustryTitle": "INSURANCE",
-      "IndustryDesc": "A full stack allaround designer that may or may not include a guide for specific createive",
+      "IndustryDesc": "Simplify insurance access with digital wallet cards: instant policy details and claims at your fingertips.",
       "LinkDesc": "Get your insurance card",
       "ModalName": "insuranceModal",
       "brand": 148,
       "programid": 684,
       "templateId": 500,
-      "templateTierId": 0
+      "templateTierId": 0,
+      "useCases": [
+        {
+          "id": "useCase1",
+          "name": "Life Insurance"
+        },
+        {
+          "id": "useCase2",
+          "name": "Medical Insurance"
+        },
+        {
+          "id": "useCase3",
+          "name": "Auto Insurance"
+        },
+        {
+          "id": "useCase3",
+          "name": "Bundled Cards"
+        }
+      ]
     },
     {
       "imageAltText": "serv icon",
       "IndustryTitle": "CPG",
-      "IndustryDesc": "Tellus pharetra erat tristique erat donec dignissim etiam sed malesuada enim sodales",
+      "IndustryDesc": "Deepen customer connections with digital wallet cards: unlock insights and tailor offers in consumer goods, fostering brand loyalty.",
       "LinkDesc": "Get your cpg card",
       "ModalName": "cpgModal",
       "brand": 148,

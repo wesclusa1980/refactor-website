@@ -27,15 +27,15 @@
   "footLinks": [
     {
       "to": "#",
-      "text": "TW."
+      "icon": "FaTwitter"
     },
     {
       "to": "#",
-      "text": "IN."
+      "icon": "FaLinkedin"
     },
     {
       "to": "#",
-      "text": "FB."
+      "icon": "FaFacebook"
     }
   ]
 }

@@ -6,50 +6,18 @@ const path = require('path');
 const cors = require('cors');
 const { MongoClient, ServerApiVersion } = require('mongodb');
 const axios = require('axios');
+const cookieParser = require('cookie-parser');
 
 
 require('dotenv').config();
 
 
-// Initialize Bambu Client
-const bambuClient = new BambuClient(
-  process.env.TENANT_ID,
-  process.env.CLIENT_ID,
-  process.env.CLIENT_SECRET,
-  process.env.DOMAIN,
-  process.env.BRANDID
-);
 
-if (!process.env.TENANT_ID || !process.env.CLIENT_ID || !process.env.CLIENT_SECRET || !process.env.DOMAIN || !process.env.BRANDID) {
-  console.error('BambuClient initialization error: Ensure all environment variables are set.');
-  process.exit(1);
-}
-
-// Connect to MongoDB Atlas
-mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
-  .then(() => console.log('Connected successfully to MongoDB Atlas'))
-  .catch(err => console.error('Error connecting to MongoDB Atlas:', err));
-  const uri = process.env.MONGO_URI;
-  const client = new MongoClient(uri, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    serverApi: ServerApiVersion.v1,
-    socketTimeoutMS: 30000,
-  });
-// Connect to MongoDB Atlas when the server starts
-async function connectMongoDB() {
-  try {
-    await client.connect();
-    console.log('Connected successfully to MongoDB Atlas');
-  } catch (error) {
-    console.error('Error connecting to MongoDB Atlas:', error);
-  }
-}
-connectMongoDB();
 
 const app = express();
 app.use(cors());
 app.use(express.json());
+app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'client/build')));
 
 // API Endpoints
@@ -67,7 +35,7 @@ const bambuClient = new BambuClient(
   process.env.CLIENT_ID,
   process.env.CLIENT_SECRET,
   process.env.DOMAIN,
-  brand
+  process.env.BRANDID
 );
   try {
       const issueWalletData = {
@@ -108,6 +76,66 @@ const bambuClient = new BambuClient(
   }
 });
 
+app.post('/update-wallet', async (req, res) => {
+  console.log("Request body:", req.body);
+  const { firstName, lastName, email, company } = req.body.person;
+  const templateTierId = req.body.templateTierId; 
+  const brand = req.body.brand; 
+  const templateId = req.body.templateId 
+  const passdata = req.body.passdata
+  const programid = req.body.programid
+  const { metaData, points } = req.body.passdata || {};
+  // Initialize Bambu Client
+const bambuClient = new BambuClient(
+  process.env.TENANT_ID,
+  process.env.CLIENT_ID,
+  process.env.CLIENT_SECRET,
+  process.env.DOMAIN,
+  process.env.BRANDID
+);
+  try {
+      const updateWalletData = {
+        brandId: brand,
+        programid: programid,
+        templateId:templateId,
+        templateTierId: templateTierId,
+        programId: programid,
+        email: email,
+        person: {
+          firstName: firstName,
+          lastName: lastName,
+          email: email,
+          company: company
+        },
+        passdata:{
+        // Include metaData and points only if they are defined
+        ...(metaData && { metaData }),
+        ...(typeof points !== 'undefined' && { points }),
+        }
+      };
+      console.log("Sending to Bambu:", updateWalletData);
+      const updateWallet = new UpdateWallet(updateWalletData);
+      const walletPassResponse = await bambuClient.execute(updateWallet);
+
+    console.log("WalletPass response:", walletPassResponse);
+
+    // Check if the response is successful
+    if (walletPassResponse.message === 'Wallet update requested') {
+      // Success response from Bambu API
+      res.json({
+        success: true,
+        message: walletPassResponse.message,
+      });
+    } else {
+      // If the message is not what we expect, handle it as an error or unexpected response
+      console.error('Unexpected response from Bambu:', walletPassResponse);
+      res.status(500).send('Unexpected response from Bambu');
+    }
+  } catch (error) {
+    console.error('Error in /update-wallet:', error);
+    res.status(500).send('Error updating wallet');
+  }
+});
 
 app.post('/increment-referral', async (req, res) => {
   try {
@@ -168,105 +196,6 @@ app.post('/increment-referral', async (req, res) => {
   }
 });
 
-app.post('/card-data', async (req, res) => {
-  console.log("Received cardData in /card-data:", req.body); 
-  try {
-    // Destructuring the request body
-    const { firstName, lastName, email, college, referrals, passId } = req.body;
-    console.log("Extracted passId from cardData:", passId); 
-
-    // Connecting to MongoDB
-    await client.connect();
-    const database = client.db('illicitelixirs');
-    const collection = database.collection('ambassadors');
-
-    // Check if a record with the same email already exists
-    const existingRecord = await collection.findOne({ email: email });
-
-    if (existingRecord) {
-      // Check for any differences between existing data and new data
-      const isDifferent = firstName !== existingRecord.firstName ||
-                          lastName !== existingRecord.lastName ||
-                          college !== existingRecord.college ||
-                          referrals !== existingRecord.referrals ||
-                          passId !== existingRecord.passId;
-
-      if (isDifferent) {
-        // Update the record if there are differences
-        await collection.updateOne(
-          { email: email },
-          { $set: { firstName, lastName, college, referrals, passId } }
-        );
-        res.status(200).json({ message: "Record updated successfully" });
-      } else {
-        // If no differences, return a message
-        res.status(200).json({ message: "No changes were made, record already exists" });
-      }
-    } else {
-      // If no existing record, create a new one
-      await collection.insertOne({ firstName, lastName, email, college, referrals, passId });
-      res.status(200).json({ message: "New record created successfully" });
-    }
-  } catch (error) {
-    console.error('Error in /card-data:', error);
-    res.status(500).send('An error occurred while processing the request.');
-  } finally {
-    // Close the MongoDB client
-    await client.close();
-  }
-});
-
-
-app.get('/referral/:email', async (req, res) => {
-  const email = req.params.email; // Assuming email is passed as a URL parameter
-
-  try {
-    // Connect to MongoDB and fetch the ambassador record by email
-    const ambassadorRecord = await Ambassador.findOne({ email: email });
-
-    if (!ambassadorRecord) {
-      return res.status(404).send('Ambassador record not found');
-    }
-
-    // Use the email to get the wallet details
-    const getWallet = new GetWallet({
-      passId: ambassadorRecord.passId // passId of the wallet pass
-    });
-
-    const walletDetails = await bambuClient.execute(getWallet);
-
-    // Check if the wallet was successfully retrieved
-    if (!walletDetails) {
-      return res.status(404).send('Wallet not found');
-    }
-
-    // Increment the referral count
-    const updatedReferrals = ambassadorRecord.referrals + 1;
-
-    // Update the record in MongoDB
-    await Ambassador.updateOne({ email: email }, { $set: { referrals: updatedReferrals } });
-
-    // Update the wallet pass with the new referral count
-    const updateWallet = new UpdateWallet({
-      passId: walletDetails.passId, // or other identifier as needed
-      // Other necessary fields...
-      passdata: {
-        metaData: {
-          referrals: updatedReferrals.toString(), // Ensure the data type matches the expected in the wallet template
-          // ...other metaData
-        },
-      },
-    });
-
-    await bambuClient.execute(updateWallet);
-
-    // Continue with your response logic, such as rendering the referral form
-    res.render('referralForm', { userData: ambassadorRecord });
-  } catch (error) {
-    console.error('Error in referral route:', error);
-    res.status(500).send('Error processing referral');
-  }
-});
 app.get('/track-qr', async (req, res) => {
   const sessionId = req.query.sessionId;
   const redirectUrl = decodeURIComponent(req.query.redirectUrl);

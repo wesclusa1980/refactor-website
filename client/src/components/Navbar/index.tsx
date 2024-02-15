@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link as ScrollLink } from 'react-scroll';
 import { Link as RouterLink } from 'react-router-dom';
+import { FaTwitter, FaLinkedin, FaFacebook } from 'react-icons/fa';
 
 import './style.css';
 import navData from '../../data/navbar.json';
@@ -80,14 +81,22 @@ function Navbar({ isLanding }) {
           </ul>
         </nav>
         <ul className="nav-soc">
-          {navData.footLinks.map((link, i) => (
+        {navData.footLinks.map((link, i) => {
+          const IconComponent = {
+            FaTwitter,
+            FaLinkedin,
+            FaFacebook
+          }[link.icon];
+
+          return (
             <li key={`foot-link-${i}`}>
               <a href={link.to} target="_blank" rel="noopener noreferrer">
-                {link.text}
+                {<IconComponent />}
               </a>
             </li>
-          ))}
-        </ul>
+          );
+        })}
+      </ul>
       </div>
     </div>
   );
