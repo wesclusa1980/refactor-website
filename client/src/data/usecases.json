@@ -1,63 +1,54 @@
 {
   "title": "Use Cases",
-
   "description": "Viverra tristique placerat massa est consectetur quisque nu fames lorem ipsum dolor sit amet consectetu.",
-
-  "portfolioItems": [
-    {
-      "gridSize": "p-one",
-      "action": {
-        "type": "item",
-        "number": 1
+  "industries": {
+    "retail": [
+      {
+        "gridSize": "p-one-half",
+        "action": {
+          "type": "popup",
+          "number": 1
+        },
+        "description": {
+          "text": "Loyalty",
+          "caption": "Caption"
+        }
       },
-      "description": {
-        "text": "e.l.f. Cosmetics",
-        "caption": "Text"
+      {
+        "gridSize": "p-one-half",
+        "action": {
+          "type": "popup",
+          "number": 2
+        },
+        "description": {
+          "text": "Order Status",
+          "caption": "Caption"
+        }
       }
-    },
-    {
-      "gridSize": "p-one-half",
-      "action": {
-        "type": "item",
-        "number": 2
+    ],
+    "hospitality": [
+      {
+        "gridSize": "p-one-half",
+        "action": {
+          "type": "popup",
+          "number": 2
+        },
+        "description": {
+          "text": "Promotions",
+          "caption": "Caption"
+        }
       },
-      "description": {
-        "text": "MARS",
-        "caption": "Text"
+      {
+        "gridSize": "p-one-half",
+        "action": {
+          "type": "popup",
+          "number": 1
+        },
+        "description": {
+          "text": "Messaging",
+          "caption": "Caption"
+        }
       }
-    },
-    {
-      "gridSize": "p-one-half",
-      "action": {
-        "type": "item",
-        "number": 3
-      },
-      "description": {
-        "text": "Nature",
-        "caption": "Text"
-      }
-    },
-    {
-      "gridSize": "p-one-half",
-      "action": {
-        "type": "popup",
-        "number": 1
-      },
-      "description": {
-        "text": "Architecture",
-        "caption": "Video"
-      }
-    },
-    {
-      "gridSize": "p-one",
-      "action": {
-        "type": "popup",
-        "number": 2
-      },
-      "description": {
-        "text": "Art",
-        "caption": "Image"
-      }
-    }
-  ]
+    ]
+  }
 }

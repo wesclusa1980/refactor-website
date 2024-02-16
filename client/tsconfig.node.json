@@ -3,9 +3,18 @@
     "composite": true,
     "module": "ESNext",
     "moduleResolution": "Node",
-    "allowSyntheticDefaultImports": true
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true, // Ensure compatibility with ES6 module imports
+    "baseUrl": ".", // Add this if you want to set a base directory for module resolution
+    "paths": { // Optional: configure paths for aliases
+      "*": ["node_modules/*", "src/types/*"] // Adjust according to your project structure
+    }
   },
-  "include": ["vite.config.ts"],
+  "include": [
+    "vite.config.ts",
+    "images.d.ts", // Include your image declarations file
+    "src/**/*" // Assuming you want to include all files under src for compilation
+  ],
   "types": ["node"],
   "typeRoots": ["./node_modules/@types"]
 }

@@ -7,8 +7,8 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 
 // Images
-import item1 from '../../../../../assets/images//portfolio/items/item1.jpg';
-import item2 from '../../../../../assets/images//portfolio/items/item2.jpg';
+import item1 from '../../../../../assets/images//portfolio/items/item3.jpg';
+import item2 from '../../../../../assets/images//portfolio/items/item3.jpg';
 import item3 from '../../../../../assets/images//portfolio/items/item3.jpg';
 
 // Styles
